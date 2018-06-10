@@ -1,0 +1,2 @@
+class Protain < ApplicationRecord
+end

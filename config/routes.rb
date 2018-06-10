@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :elements
+  resources :atoms
+  resources :molecules
+  resources :molucules
+  resources :protains
+  resources :parts
+  resources :members
+  resources :departments
+  resources :companies
+  resources :countries
+  resources :planets
+  resources :stars
+  resources :universes do
+    resources :superclusters do
+      resources :galaxies
+    end
+  end
 end

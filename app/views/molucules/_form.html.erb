@@ -1,0 +1,22 @@
+<%= form_with(model: molucule, local: true) do |form| %>
+  <% if molucule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(molucule.errors.count, "error") %> prohibited this molucule from being saved:</h2>
+
+      <ul>
+      <% molucule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :molucule_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

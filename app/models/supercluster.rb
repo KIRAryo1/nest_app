@@ -1,0 +1,2 @@
+class Supercluster < ApplicationRecord
+end

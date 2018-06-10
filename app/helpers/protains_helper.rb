@@ -1,0 +1,2 @@
+module ProtainsHelper
+end

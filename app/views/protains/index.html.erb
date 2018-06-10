@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Protains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @protains.each do |protain| %>
+      <tr>
+        <td><%= protain.name %></td>
+        <td><%= link_to 'Show', protain %></td>
+        <td><%= link_to 'Edit', edit_protain_path(protain) %></td>
+        <td><%= link_to 'Destroy', protain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Protain', new_protain_path %>

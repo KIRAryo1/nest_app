@@ -1,0 +1,22 @@
+<%= form_with(model: protain, local: true) do |form| %>
+  <% if protain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(protain.errors.count, "error") %> prohibited this protain from being saved:</h2>
+
+      <ul>
+      <% protain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :protain_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
